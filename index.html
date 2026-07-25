@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Minahil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="petals" aria-hidden="true"></div>
+
+  <!-- ============ LOCK SCREEN ============ -->
+  <section class="lock-screen" id="lockScreen">
+    <div class="lock-card">
+      <p class="eyebrow">a private letter for</p>
+      <h1 class="lock-name">Minahil</h1>
+
+      <form id="lockForm" class="lock-form" autocomplete="off">
+        <label class="field">
+          <span>Your date of birth</span>
+          <input type="date" id="dobInput" required>
+        </label>
+
+        <label class="field">
+          <span>Your name</span>
+          <input type="text" id="nameInput" placeholder="Type your name" required>
+        </label>
+
+        <button type="submit" class="unlock-btn">Unlock the letter</button>
+        <p class="error-msg" id="errorMsg">That doesn't quite match — try again.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ BALLOONS (spawned by JS) ============ -->
+  <div class="balloons" id="balloons" aria-hidden="true"></div>
+
+  <!-- ============ MAIN LETTER ============ -->
+  <main class="letter" id="letter">
+
+    <section class="hero">
+      <p class="eyebrow reveal">for you, on your day</p>
+      <h1 class="headline reveal">
+        Happy <em>Birthday</em><br>Minahil
+      </h1>
+      <div class="flourish reveal" aria-hidden="true">✦</div>
+    </section>
+
+    <section class="message-section">
+      <p class="message reveal">
+        Har saal aik naya mauqa laata hai — muskurane ka, sapne dekhne ka,
+        aur thodi si aur roshni is duniya mein phailane ka. Aaj ka din
+        khaas hai, kyunke aaj tum paida hui, aur duniya thodi si behtar
+        ho gayi.
+      </p>
+      <p class="message reveal">
+        Umeed hai yeh saal tumhare liye khushiyan, sukoon, aur woh sab
+        kuch le kar aaye jo tum chahti ho. Rehna hamesha aise hi —
+        meherbaan, hansmukh, aur apni zaat mein khaas.
+      </p>
+    </section>
+
+    <!-- ============ CAKE + CANDLES ============ -->
+    <section class="cake-section reveal">
+      <p class="cake-caption" id="cakeCaption">Blow out each candle to make a wish</p>
+      <div class="cake" id="cake">
+        <div class="candles">
+          <button class="candle" data-candle aria-label="Candle 1"><span class="flame"></span></button>
+          <button class="candle" data-candle aria-label="Candle 2"><span class="flame"></span></button>
+          <button class="candle" data-candle aria-label="Candle 3"><span class="flame"></span></button>
+          <button class="candle" data-candle aria-label="Candle 4"><span class="flame"></span></button>
+          <button class="candle" data-candle aria-label="Candle 5"><span class="flame"></span></button>
+        </div>
+        <div class="cake-top"></div>
+        <div class="cake-drip"></div>
+        <div class="cake-layer"></div>
+        <div class="cake-plate"></div>
+      </div>
+    </section>
+
+    <!-- ============ WISH GENERATOR ============ -->
+    <section class="wish-generator reveal">
+      <p class="eyebrow">1,100 wishes, one for right now</p>
+      <div class="wish-card">
+        <p class="wish-text" id="wishText">Tap below to receive a birthday wish, made just for this moment.</p>
+      </div>
+      <button class="wish-btn" id="wishBtn">Give me a wish ✦</button>
+      <p class="wish-counter" id="wishCounter"></p>
+    </section>
+
+    <section class="closing reveal">
+      <p class="closing-line">With all my love,</p>
+      <p class="signature">Your friend</p>
+    </section>
+
+  </main>
+
+<script src="script.js"></script>
+</body>
+  </html>
+  
